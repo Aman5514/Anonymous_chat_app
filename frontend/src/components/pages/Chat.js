@@ -10,6 +10,7 @@ import {
   IconButton,
   Input,
   Text,
+  VStack,
 } from "@chakra-ui/react";
 import io from "socket.io-client";
 import InputEmoji from "react-input-emoji";
@@ -57,23 +58,23 @@ const Chat = () => {
           <Text fontSize="xs">online</Text>
         </Flex>
       </Flex>
-      {/* <div>
-        <Input
-          placeholder="Room Number..."
-          onChange={(event) => {
-            setRoom(event.target.value);
-          }}
-        />
-        <Button olorScheme="teal" variant="solid" onClick={joinRoom}>
-          Join Room
-        </Button>
-      </div> */}
-      <Box
+
+      <VStack
         h="calc(100vh - 300px)"
-        bg="gray.200"
+        p={2}
         borderRadius={12}
         overflowY="scroll"
-      ></Box>
+      >
+        <Text fontSize="xs" p="10px" bg="cyan.100" w="100%" borderRadius={8} >
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+        </Text>
+        <Text fontSize="xs" p="10px" bg="gray.100" w="100%" borderRadius={8} >
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+        </Text>
+        <Text fontSize="xs">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+        </Text>
+      </VStack>
       <Flex alignItems="center" gap={2}>
         <InputEmoji
           value={text}
@@ -98,3 +99,24 @@ const Chat = () => {
 };
 
 export default Chat;
+
+
+    {/* <div>
+          <Input
+            placeholder="Room Number..."
+            onChange={(event) => {
+              setRoom(event.target.value);
+            }}
+          />
+          <Button olorScheme="teal" variant="solid" onClick={joinRoom}>
+            Join Room
+          </Button>
+          <Input
+            placeholder="Enter message"
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
+          />
+        </div>
+        <Button onClick={sendMessage}>send</Button>
+        <p>{messageReceived}</p> */}
