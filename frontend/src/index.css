@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  z-index: 1000;
+  overflow: hidden;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.716);
+  border-radius: 50px;
+
+}
+@media only screen and (max-width: 440px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 169, 169, 0.716);
+  }
+}
