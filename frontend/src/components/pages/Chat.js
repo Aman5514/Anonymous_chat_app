@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Chat.css";
 import {
   Avatar,
   AvatarBadge,
@@ -15,6 +14,7 @@ import {
 import io from "socket.io-client";
 import InputEmoji from "react-input-emoji";
 import { IoSendOutline } from "react-icons/io5";
+import ChatInput from "../common/ChatInput/ChatInput";
 
 const socket = io.connect("http://localhost:8080");
 
@@ -65,18 +65,21 @@ const Chat = () => {
         borderRadius={12}
         overflowY="scroll"
       >
-        <Text fontSize="xs" p="10px" bg="cyan.100" w="100%" borderRadius={8} >
-        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+        <Text fontSize="xs" p="10px" bg="cyan.100" w="100%" borderRadius={8}>
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
         </Text>
-        <Text fontSize="xs" p="10px" bg="gray.100" w="100%" borderRadius={8} >
-        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+        <Text fontSize="xs" p="10px" bg="gray.100" w="100%" borderRadius={8}>
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
         </Text>
         <Text fontSize="xs">
-        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a 
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
         </Text>
       </VStack>
       <Flex alignItems="center" gap={2}>
-        <InputEmoji
+        {/* <InputEmoji
           value={text}
           onChange={setText}
           cleanOnEnter
@@ -92,7 +95,8 @@ const Chat = () => {
           isRound
           size="sm"
           icon={<IoSendOutline />}
-        />
+        /> */}
+        <ChatInput />
       </Flex>
     </Flex>
   );
@@ -100,8 +104,8 @@ const Chat = () => {
 
 export default Chat;
 
-
-    {/* <div>
+{
+  /* <div>
           <Input
             placeholder="Room Number..."
             onChange={(event) => {
@@ -119,4 +123,5 @@ export default Chat;
           />
         </div>
         <Button onClick={sendMessage}>send</Button>
-        <p>{messageReceived}</p> */}
+        <p>{messageReceived}</p> */
+}
